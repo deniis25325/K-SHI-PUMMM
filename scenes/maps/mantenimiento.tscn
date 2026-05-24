@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dv83yx782dpx0"]
+
+[ext_resource type="Texture2D" uid="uid://c2i3hqx7bd2gf" path="res://assets/maps/ChatGPT Image 21 may 2026, 06_30_20 p.m..png" id="1_gh821"]
+[ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_1l6f6"]
+
+[node name="Mantenimiento" type="Node2D" unique_id=229852656]
+
+[node name="ChatGptImage21May2026,063020P_m_" type="Sprite2D" parent="." unique_id=230580879]
+position = Vector2(106, 131)
+texture = ExtResource("1_gh821")
+
+[node name="Player" parent="ChatGptImage21May2026,063020P_m_" unique_id=1150411554 instance=ExtResource("2_1l6f6")]
+position = Vector2(-677, -9)

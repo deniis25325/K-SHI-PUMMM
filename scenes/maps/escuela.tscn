@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://1pr723tb5cq7"]
+
+[ext_resource type="Script" uid="uid://cjdaka8uftrn" path="res://scenes/maps/escuela.gd" id="1_oud2v"]
+[ext_resource type="Texture2D" uid="uid://bq6tapgykrdrf" path="res://assets/maps/ChatGPT Image 23 may 2026, 08_56_32 p.m..png" id="1_s3lg6"]
+[ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_6k3lt"]
+[ext_resource type="PackedScene" uid="uid://df6hlwwo2s86h" path="res://scenes/ui/pause_menu.tscn" id="4_w7wed"]
+[ext_resource type="Script" uid="uid://bvf4adbri6xos" path="res://ui_dialogo.gd" id="6_vvubh"]
+[ext_resource type="PackedScene" uid="uid://p570bbhnlrbv" path="res://scenes/player/npc_chicaespiritista.tscn" id="7_oipjq"]
+[ext_resource type="PackedScene" uid="uid://byhbn6a4jnrl4" path="res://scenes/player/profe.tscn" id="8_u0b2w"]
+[ext_resource type="Script" uid="uid://ccikoom01e4ir" path="res://scenes/maps/puerta_museo.gd" id="9_iji24"]
+
+[sub_resource type="FontVariation" id="FontVariation_vvubh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oipjq"]
+font = SubResource("FontVariation_vvubh")
+font_size = 25
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iji24"]
+size = Vector2(243, 29)
+
+[node name="Escuela" type="Node2D" unique_id=299282095]
+script = ExtResource("1_oud2v")
+
+[node name="UI_Dialogo" type="CanvasLayer" parent="." unique_id=1649664060]
+script = ExtResource("6_vvubh")
+
+[node name="Dialogo" type="Panel" parent="UI_Dialogo" unique_id=1330042743]
+anchors_preset = -1
+anchor_left = 0.127
+anchor_top = 0.82600003
+anchor_right = 0.127
+anchor_bottom = 0.82600003
+offset_left = -62.559998
+offset_top = -94.72003
+offset_right = 863.44
+offset_bottom = 55.27997
+
+[node name="Texto" type="Label" parent="UI_Dialogo/Dialogo" unique_id=1321799601]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.93000007
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 21.0
+offset_bottom = -0.50001526
+label_settings = SubResource("LabelSettings_oipjq")
+autowrap_mode = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1535843889]
+
+[node name="ChatGptImage23May2026,085632P_m_" type="Sprite2D" parent="." unique_id=439092175]
+position = Vector2(672.5, 404.29382)
+scale = Vector2(0.96932954, 0.7188838)
+texture = ExtResource("1_s3lg6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1087713932]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=40117672 instance=ExtResource("4_w7wed")]
+
+[node name="PuertaMuseo" type="Area2D" parent="." unique_id=1155141843]
+position = Vector2(-3, -4)
+script = ExtResource("9_iji24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaMuseo" unique_id=17247207]
+position = Vector2(674.5, 793.5)
+shape = SubResource("RectangleShape2D_iji24")
+
+[node name="Player" parent="." unique_id=1150411554 instance=ExtResource("2_6k3lt")]
+position = Vector2(11, 200)
+
+[node name="NPC Chicaespiritista" parent="." unique_id=509943262 node_paths=PackedStringArray("ui_dialogo") instance=ExtResource("7_oipjq")]
+ui_dialogo = NodePath("../UI_Dialogo")
+
+[node name="profe" parent="." unique_id=947320285 node_paths=PackedStringArray("ui_dialogo") instance=ExtResource("8_u0b2w")]
+ui_dialogo = NodePath("../UI_Dialogo")
+
+[connection signal="body_entered" from="PuertaMuseo" to="PuertaMuseo" method="_on_body_entered"]

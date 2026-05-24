@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://p570bbhnlrbv"]
+
+[ext_resource type="Script" uid="uid://lubuwocs6lw" path="res://scenes/player/npc_chicaespiritista.gd" id="1_dugj7"]
+[ext_resource type="Texture2D" uid="uid://byhm0npbjinuu" path="res://assets/NPC/1-rival-chica-espiritista-Photoroom.png" id="1_vgjnn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgjnn"]
+size = Vector2(77, 140)
+
+[node name="NPC Chicaespiritista" type="Node2D" unique_id=509943262]
+script = ExtResource("1_dugj7")
+
+[node name="1RivalChicaEspiritistaPhotoroom" type="Sprite2D" parent="." unique_id=128963554]
+position = Vector2(615.5625, 325.5)
+scale = Vector2(0.14933372, 0.11298076)
+texture = ExtResource("1_vgjnn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1741243359]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1503161931]
+position = Vector2(629.5, 331)
+shape = SubResource("RectangleShape2D_vgjnn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

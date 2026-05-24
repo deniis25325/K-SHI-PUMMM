@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://df6hlwwo2s86h"]
+
+[ext_resource type="Script" uid="uid://ibp2lxjc0nak" path="res://scenes/ui/pause_menu.gd" id="1_6tw0m"]
+
+[node name="PauseMenu" type="Control" unique_id=40117672]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tw0m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=742953524]
+layout_mode = 0
+offset_right = 121.0
+offset_bottom = 137.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1678336975]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 136.0
+
+[node name="Continuar" type="Button" parent="VBoxContainer" unique_id=1479500896]
+layout_mode = 2
+text = "Continuar"
+
+[node name="Guardar" type="Button" parent="VBoxContainer" unique_id=658217500]
+layout_mode = 2
+text = "Guardar"
+
+[node name="Cargar" type="Button" parent="VBoxContainer" unique_id=521015830]
+layout_mode = 2
+text = "Cargar"
+
+[node name="MenuPrincipal" type="Button" parent="VBoxContainer" unique_id=2076705139]
+layout_mode = 2
+text = "MenuPrincipal"
+
+[connection signal="pressed" from="VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Guardar" to="." method="_on_guardar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cargar" to="." method="_on_cargar_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuPrincipal" to="." method="_on_menu_principal_pressed"]

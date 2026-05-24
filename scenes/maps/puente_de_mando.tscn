@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cgaivml1cs877"]
+
+[ext_resource type="Texture2D" uid="uid://caa2rekd4vxui" path="res://assets/maps/ChatGPT Image 21 may 2026, 06_41_45 p.m..png" id="1_wfb3j"]
+[ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_ilwe7"]
+
+[node name="puente de mando" type="Node2D" unique_id=2086463862]
+
+[node name="ChatGptImage21May2026,064145P_m_" type="Sprite2D" parent="." unique_id=650625146]
+position = Vector2(43, 134)
+texture = ExtResource("1_wfb3j")
+
+[node name="Player" parent="." unique_id=1150411554 instance=ExtResource("2_ilwe7")]
+position = Vector2(-632, 135)

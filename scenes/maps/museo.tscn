@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bngyqly1e05ki"]
+
+[ext_resource type="Script" uid="uid://cjnaj4dmjfmtd" path="res://scenes/maps/puerta_escuela.gd" id="1_swdoe"]
+[ext_resource type="Texture2D" uid="uid://b4wbypgsyoatl" path="res://assets/maps/ChatGPT Image 23 may 2026, 08_56_40 p.m..png" id="2_swdoe"]
+[ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="3_swdoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swdoe"]
+size = Vector2(174, 33.5)
+
+[node name="museo" type="Node2D" unique_id=581284995]
+
+[node name="PuertaEscuela" type="Area2D" parent="." unique_id=265481764]
+script = ExtResource("1_swdoe")
+
+[node name="ChatGptImage23May2026,085640P_m_" type="Sprite2D" parent="PuertaEscuela" unique_id=1244338741]
+position = Vector2(638.12494, 368.50003)
+scale = Vector2(0.9205925, 0.6580588)
+texture = ExtResource("2_swdoe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaEscuela" unique_id=1167915420]
+position = Vector2(634, 721.25)
+shape = SubResource("RectangleShape2D_swdoe")
+
+[node name="Player" parent="." unique_id=1150411554 instance=ExtResource("3_swdoe")]
+position = Vector2(-53, 173)
+
+[connection signal="body_entered" from="PuertaEscuela" to="PuertaEscuela" method="_on_body_entered"]

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dmkt8pm04qnwc"]
+
+[ext_resource type="Script" uid="uid://m0oq4afv5kuh" path="res://scenes/ui/main_menu.gd" id="1_fe2o3"]
+[ext_resource type="Texture2D" uid="uid://cyruyh6jqjmi7" path="res://assets/characters/ChatGPT Image 23 may 2026, 07_57_14 p.m..png" id="1_sl1te"]
+
+[node name="MainMenu" type="Control" unique_id=220951746]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fe2o3")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=173313637]
+layout_mode = 0
+offset_right = 1302.0
+offset_bottom = 746.0
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="ChatGptImage23May2026,075714P_m_" type="Sprite2D" parent="Background" unique_id=1043004192]
+position = Vector2(648, 371)
+scale = Vector2(0.83723956, 0.734375)
+texture = ExtResource("1_sl1te")
+metadata/_edit_lock_ = true
+
+[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=341428729]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 571.0
+offset_right = 1230.0
+offset_bottom = 722.0
+
+[node name="NuevaPartida" type="Button" parent="MenuButtons" unique_id=1835118382]
+layout_mode = 2
+size_flags_stretch_ratio = 2.83
+text = "Nueva parida"
+
+[node name="CargarPartida" type="Button" parent="MenuButtons" unique_id=1031159194]
+layout_mode = 2
+text = "Cargar Partida"
+
+[node name="Opciones" type="Button" parent="MenuButtons" unique_id=370358918]
+layout_mode = 2
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="MenuButtons" unique_id=1972745589]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="MenuButtons/NuevaPartida" to="." method="_on_nueva_partida_pressed"]
+[connection signal="pressed" from="MenuButtons/CargarPartida" to="." method="_on_cargar_partida_pressed"]
+[connection signal="pressed" from="MenuButtons/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="MenuButtons/Salir" to="." method="_on_salir_pressed"]

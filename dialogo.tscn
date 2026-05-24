@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://46s6qfp1274n"]
+
+[ext_resource type="Script" uid="uid://bvf4adbri6xos" path="res://ui_dialogo.gd" id="1_y0g0c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s2xen"]
+font_size = 30
+
+[node name="Dialogo1" type="Node2D" unique_id=737386502]
+
+[node name="UI_Dialogo" type="CanvasLayer" parent="." unique_id=584132287]
+script = ExtResource("1_y0g0c")
+
+[node name="Dialogo" type="Panel" parent="UI_Dialogo" unique_id=18067631]
+visible = false
+offset_left = 163.0
+offset_top = 516.0
+offset_right = 1168.0
+offset_bottom = 673.0
+
+[node name="Texto" type="Label" parent="UI_Dialogo/Dialogo" unique_id=761944435]
+layout_mode = 0
+offset_right = 1001.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_s2xen")
+autowrap_mode = 2
