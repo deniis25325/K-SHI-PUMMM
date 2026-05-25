@@ -2,6 +2,51 @@
 
 [ext_resource type="Texture2D" uid="uid://665dvd188i10" path="res://assets/maps/ChatGPT Image 21 may 2026, 06_44_50 p.m..png" id="1_s45ng"]
 [ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_fya3h"]
+[ext_resource type="Texture2D" uid="uid://bhylpn0l5u3e6" path="res://assets/characters/11094040622267339192-Photoroom.png" id="3_fya3h"]
+[ext_resource type="Script" uid="uid://by4xjrkq6v4ty" path="res://scenes/maps/alien444.gd" id="4_lp05i"]
+[ext_resource type="Script" uid="uid://bvf4adbri6xos" path="res://ui_dialogo.gd" id="5_8m3hy"]
+[ext_resource type="Script" uid="uid://b8nfpeunasvfd" path="res://scripts/inventario.gd" id="6_08u4v"]
+[ext_resource type="Script" uid="uid://nbwvkuqenwui" path="res://scenes/maps/inventario_label.gd" id="7_wnx2a"]
+[ext_resource type="Script" uid="uid://coymoyelthiag" path="res://scenes/maps/entrada_hub.gd" id="8_08u4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s45ng"]
+size = Vector2(1405, 204.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fya3h"]
+size = Vector2(293, 964)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lp05i"]
+size = Vector2(1149.5, 175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hefe7"]
+size = Vector2(270, 284)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmoni"]
+size = Vector2(272.5, 684.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8m3hy"]
+size = Vector2(295, 342)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08u4v"]
+size = Vector2(168, 356.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnx2a"]
+size = Vector2(177, 213)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuanv"]
+size = Vector2(221, 249)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xuanv"]
+font_size = 30
+
+[sub_resource type="FontVariation" id="FontVariation_whpnw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yv7rq"]
+font = SubResource("FontVariation_whpnw")
+font_size = 30
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whpnw"]
+size = Vector2(229, 63)
 
 [node name="reactor" type="Node2D" unique_id=417673888]
 
@@ -10,4 +55,101 @@ position = Vector2(184, 192)
 texture = ExtResource("1_s45ng")
 
 [node name="Player" parent="ChatGptImage21May2026,064450P_m_" unique_id=1150411554 instance=ExtResource("2_fya3h")]
-position = Vector2(-677, 5)
+position = Vector2(-676, -234)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1516420227]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1960200604]
+position = Vector2(172.5, 625.25)
+shape = SubResource("RectangleShape2D_s45ng")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=471546836]
+position = Vector2(-382.5, 99)
+shape = SubResource("RectangleShape2D_fya3h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=547133379]
+position = Vector2(313.25, -214.5)
+shape = SubResource("RectangleShape2D_lp05i")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1910381851]
+position = Vector2(192, 172)
+shape = SubResource("RectangleShape2D_hefe7")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=264950325]
+position = Vector2(757.75, 207.25)
+shape = SubResource("RectangleShape2D_xmoni")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1859874537]
+position = Vector2(619.5, 192)
+shape = SubResource("RectangleShape2D_8m3hy")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1531437043]
+position = Vector2(-200, 174.25)
+shape = SubResource("RectangleShape2D_08u4v")
+
+[node name="11094040622267339192Photoroom" type="Sprite2D" parent="StaticBody2D" unique_id=1896240431]
+position = Vector2(-45, -23)
+scale = Vector2(0.28857416, 0.32066187)
+texture = ExtResource("3_fya3h")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1156287336]
+position = Vector2(-23.5, 5.5)
+shape = SubResource("RectangleShape2D_wnx2a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=995085043 node_paths=PackedStringArray("ui_dialogo")]
+script = ExtResource("4_lp05i")
+ui_dialogo = NodePath("../UI_Dialogo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=802880078]
+position = Vector2(-25.5, 2.5)
+shape = SubResource("RectangleShape2D_xuanv")
+
+[node name="UI_Dialogo" type="CanvasLayer" parent="." unique_id=416322637]
+script = ExtResource("5_8m3hy")
+
+[node name="Dialogo" type="Panel" parent="UI_Dialogo" unique_id=1237982260]
+offset_left = 163.0
+offset_top = 516.0
+offset_right = 1168.0
+offset_bottom = 673.0
+
+[node name="Texto" type="Label" parent="UI_Dialogo/Dialogo" unique_id=444840628]
+layout_mode = 0
+offset_right = 1001.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_xuanv")
+autowrap_mode = 2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1716598548]
+script = ExtResource("6_08u4v")
+
+[node name="Panel" type="Panel" parent="UI" unique_id=1367275247]
+offset_left = 915.0
+offset_top = 40.0
+offset_right = 1259.0
+offset_bottom = 686.0
+
+[node name="Label" type="Label" parent="UI/Panel" unique_id=1065093110]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -306.672
+offset_top = -309.0
+offset_right = 3.328003
+offset_bottom = 308.0
+label_settings = SubResource("LabelSettings_yv7rq")
+script = ExtResource("7_wnx2a")
+
+[node name="EntradaHub" type="Area2D" parent="." unique_id=316437976]
+script = ExtResource("8_08u4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaHub" unique_id=1167206043]
+position = Vector2(185, 518)
+shape = SubResource("RectangleShape2D_whpnw")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="EntradaHub" to="EntradaHub" method="_on_body_entered"]

@@ -1,10 +1,16 @@
 extends CharacterBody2D
-
+var puede_moverse: bool = true
 @export var speed = 120
 
 @onready var sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
+	# Si alguien apagó esta variable, frenamos en seco
+	if not puede_moverse:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return # Esto hace que ignore los botones del teclado
+	
 
 	var direction = Vector2.ZERO
 

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cdmox7dn885uv"]
+
+[ext_resource type="Texture2D" uid="uid://dc8qnlcyyr3nk" path="res://assets/maps/ChatGPT Image 24 may 2026, 11_28_25 p.m..png" id="1_fegpq"]
+
+[node name="almacen" type="Node2D" unique_id=2013468381]
+
+[node name="ChatGptImage24May2026,112825P_m_" type="Sprite2D" parent="." unique_id=508418709]
+position = Vector2(642.49994, 357.5)
+scale = Vector2(0.91654783, 0.6479501)
+texture = ExtResource("1_fegpq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1603938223]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=71601338]

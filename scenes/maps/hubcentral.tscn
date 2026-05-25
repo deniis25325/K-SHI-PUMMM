@@ -4,12 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://cyo7j7gxdhlm3" path="res://assets/maps/ChatGPT Image 20 may 2026, 04_30_04 p.m..png" id="1_jnwfn"]
 [ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_5cp18"]
 [ext_resource type="Texture2D" uid="uid://b7kxf3j68dkfw" path="res://assets/maps/WhatsApp Image 2026-05-21 at 6.01.27 PM (2) (1).png" id="3_i0aay"]
-[ext_resource type="Script" uid="uid://cbp7pkwash0aq" path="res://scenes/maps/entrada_reactor.gd" id="4_kcn8i"]
-[ext_resource type="Script" uid="uid://dl54cbpm1pjhx" path="res://scenes/maps/mensaje.gd" id="5_jnwfn"]
-[ext_resource type="Script" uid="uid://bxpu67asdgban" path="res://scenes/maps/entrada_observacion.gd" id="6_5cp18"]
+[ext_resource type="Script" uid="uid://b8nfpeunasvfd" path="res://scripts/inventario.gd" id="5_3khgs"]
+[ext_resource type="Texture2D" uid="uid://g474m7qe1kri" path="res://assets/NPC/ChatGPT Image 23 may 2026, 11_01_53 p.m.-Photoroom.png" id="6_5cp18"]
+[ext_resource type="Script" uid="uid://lwuv3acq2rb" path="res://scenes/maps/alien111.gd" id="6_i0aay"]
 [ext_resource type="Script" uid="uid://nbwvkuqenwui" path="res://scenes/maps/inventario_label.gd" id="6_sei1g"]
-[ext_resource type="Script" uid="uid://bkbfeumc6qcd3" path="res://scenes/maps/entrada_laboratorio.gd" id="7_i0aay"]
-[ext_resource type="PackedScene" uid="uid://bbodc0bpdmlxr" path="res://scenes/player/objeto.tscn" id="9_0xlcw"]
+[ext_resource type="Script" uid="uid://bvf4adbri6xos" path="res://ui_dialogo.gd" id="8_sei1g"]
+[ext_resource type="Script" uid="uid://d0rvsdjw6ormf" path="res://scenes/maps/puerta.gd" id="9_0xlcw"]
+[ext_resource type="Script" uid="uid://cq6sgrgoikm06" path="res://scenes/maps/entrada_mantenimiento.gd" id="11_owach"]
+[ext_resource type="Script" uid="uid://cf1mfo6cte1ga" path="res://scenes/maps/entrada_enfermeria.gd" id="12_feg3v"]
+[ext_resource type="Script" uid="uid://cdwbx8glwnbvx" path="res://scenes/maps/entrada_observacion11.gd" id="13_17q0q"]
+[ext_resource type="Script" uid="uid://6dx5uoi3rp0t" path="res://scenes/maps/entrada_reactor11.gd" id="14_xl0ly"]
+[ext_resource type="Script" uid="uid://dy4q6v00cbujs" path="res://scenes/maps/entrada_almacen.gd" id="15_nl7p8"]
+[ext_resource type="Script" uid="uid://cf14dkek8ua4e" path="res://scenes/maps/entrada_dormitorios.gd" id="16_6xgh3"]
+[ext_resource type="Script" uid="uid://f2x5t1tw5xj8" path="res://scenes/maps/entrada_puente.gd" id="17_uby1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ijf"]
 size = Vector2(275, 16)
@@ -89,26 +96,44 @@ size = Vector2(189.5, 74)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii1xn"]
 size = Vector2(114, 15.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y24ie"]
-size = Vector2(114, 17)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0aay"]
+size = Vector2(96, 167)
 
-[sub_resource type="FontVariation" id="FontVariation_jnwfn"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5cp18"]
-font = SubResource("FontVariation_jnwfn")
+[sub_resource type="LabelSettings" id="LabelSettings_0xlcw"]
 font_size = 30
 
-[sub_resource type="FontVariation" id="FontVariation_0xlcw"]
+[sub_resource type="FontVariation" id="FontVariation_feg3v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3khgs"]
-font = SubResource("FontVariation_0xlcw")
+font = SubResource("FontVariation_feg3v")
 font_size = 30
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnwfn"]
-size = Vector2(117, 23)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sei1g"]
+size = Vector2(98, 167)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cp18"]
-size = Vector2(95, 24.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xlcw"]
+size = Vector2(146, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feg3v"]
+size = Vector2(178, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17q0q"]
+size = Vector2(107, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl0ly"]
+size = Vector2(112.5, 28.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nl7p8"]
+size = Vector2(137, 20.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xgh3"]
+size = Vector2(116, 23.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uby1p"]
+size = Vector2(129, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfgnh"]
+size = Vector2(152, 20)
 
 [node name="Hubcentral" type="Node2D" unique_id=1037031633]
 position = Vector2(-23, 68)
@@ -121,13 +146,6 @@ texture = ExtResource("1_jnwfn")
 [node name="capa2" type="Sprite2D" parent="." unique_id=1537195215]
 position = Vector2(-93, 432)
 texture = ExtResource("1_jnwfn")
-
-[node name="Player" parent="." unique_id=1150411554 groups=["player"] instance=ExtResource("2_5cp18")]
-position = Vector2(-840, 106)
-
-[node name="WhatsAppImage20260521At6_01_27Pm(2)(1)" type="Sprite2D" parent="." unique_id=827444655]
-position = Vector2(-92, 770)
-texture = ExtResource("3_i0aay")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2031366709]
 position = Vector2(-349, 712)
@@ -291,77 +309,132 @@ shape = SubResource("RectangleShape2D_fx1tl")
 position = Vector2(257, -323.75)
 shape = SubResource("RectangleShape2D_ii1xn")
 
-[node name="EntradaReactor" type="Area2D" parent="." unique_id=2700762]
-script = ExtResource("4_kcn8i")
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="StaticBody2D" unique_id=1265049830]
+position = Vector2(403, -276.5)
+shape = SubResource("RectangleShape2D_i0aay")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaReactor" unique_id=1657213618]
-position = Vector2(-89, 706.5)
-shape = SubResource("RectangleShape2D_y24ie")
+[node name="UI_Dialogo" type="CanvasLayer" parent="." unique_id=657027198]
+script = ExtResource("8_sei1g")
 
-[node name="Sprite2D" type="Sprite2D" parent="EntradaReactor" unique_id=1640523757]
+[node name="Dialogo" type="Panel" parent="UI_Dialogo" unique_id=737775473]
+offset_left = 163.0
+offset_top = 516.0
+offset_right = 1168.0
+offset_bottom = 673.0
+
+[node name="Texto" type="Label" parent="UI_Dialogo/Dialogo" unique_id=452316960]
+layout_mode = 0
+offset_right = 1001.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_0xlcw")
+autowrap_mode = 2
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=823496047]
+script = ExtResource("5_3khgs")
 
-[node name="Mensaje" type="Label" parent="UI" unique_id=220710594]
-anchors_preset = -1
-anchor_left = 0.162
-anchor_top = 0.841
-anchor_right = 0.162
-anchor_bottom = 0.841
-offset_left = -26.36
-offset_top = -31.52002
-offset_right = 852.64
-offset_bottom = 91.47998
-label_settings = SubResource("LabelSettings_5cp18")
-script = ExtResource("5_jnwfn")
+[node name="Panel" type="Panel" parent="UI" unique_id=525645822]
+offset_left = 915.0
+offset_top = 40.0
+offset_right = 1259.0
+offset_bottom = 686.0
 
-[node name="InventarioLabel" type="Label" parent="UI" unique_id=1048024730]
+[node name="Label" type="Label" parent="UI/Panel" unique_id=1048024730]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.938
 anchor_top = 0.5
 anchor_right = 0.938
 anchor_bottom = 0.5
-offset_left = -269.64
-offset_top = -306.0
-offset_right = 40.359985
-offset_bottom = 311.0
+offset_left = -306.672
+offset_top = -309.0
+offset_right = 3.328003
+offset_bottom = 308.0
 label_settings = SubResource("LabelSettings_3khgs")
 script = ExtResource("6_sei1g")
 
-[node name="EntradaObservacion" type="Area2D" parent="." unique_id=1416671749]
-script = ExtResource("6_5cp18")
+[node name="Area2D" type="Area2D" parent="." unique_id=92638789 node_paths=PackedStringArray("ui_dialogo")]
+script = ExtResource("6_i0aay")
+ui_dialogo = NodePath("../UI_Dialogo")
 
-[node name="Sprite2D" type="Sprite2D" parent="EntradaObservacion" unique_id=1839122683]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2091906875]
+position = Vector2(56, 440.5)
+shape = SubResource("RectangleShape2D_sei1g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaObservacion" unique_id=1000547578]
-position = Vector2(-436.5, 182.5)
-shape = SubResource("RectangleShape2D_jnwfn")
+[node name="ChatGptImage23May2026,110153P_m_Photoroom" type="Sprite2D" parent="." unique_id=1465947303]
+position = Vector2(61, 418)
+scale = Vector2(0.12759173, 0.09409889)
+texture = ExtResource("6_5cp18")
 
-[node name="EntradaLaboratorio" type="Area2D" parent="." unique_id=536500951]
-script = ExtResource("7_i0aay")
+[node name="Player" parent="." unique_id=1150411554 instance=ExtResource("2_5cp18")]
+position = Vector2(-840, 106)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaLaboratorio" unique_id=181359079]
-position = Vector2(252.5, 179.75)
-shape = SubResource("RectangleShape2D_5cp18")
+[node name="WhatsAppImage20260521At6_01_27Pm(2)(1)" type="Sprite2D" parent="." unique_id=827444655]
+position = Vector2(-92, 770)
+texture = ExtResource("3_i0aay")
 
-[node name="Sprite2D" type="Sprite2D" parent="EntradaLaboratorio" unique_id=1637463711]
+[node name="EntradaLaboratorio" type="Area2D" parent="." unique_id=1020380777]
+script = ExtResource("9_0xlcw")
 
-[node name="EntradaMantenimiento" type="Area2D" parent="." unique_id=1046772700]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaLaboratorio" unique_id=170814213]
+position = Vector2(261, 169)
+shape = SubResource("RectangleShape2D_0xlcw")
 
-[node name="EntradaEnfermeria" type="Area2D" parent="." unique_id=191464509]
+[node name="EntradaMantenimiento" type="Area2D" parent="." unique_id=706585568]
+script = ExtResource("11_owach")
 
-[node name="EntradaAlmacen" type="Area2D" parent="." unique_id=1267537063]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaMantenimiento" unique_id=102925849]
+position = Vector2(-421, 594)
+shape = SubResource("RectangleShape2D_feg3v")
 
-[node name="EntradaDormitorio" type="Area2D" parent="." unique_id=49462640]
+[node name="EntradaEnfermeria" type="Area2D" parent="." unique_id=1618760861]
+script = ExtResource("12_feg3v")
 
-[node name="EntradaPuente" type="Area2D" parent="." unique_id=613359551]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaEnfermeria" unique_id=632795785]
+position = Vector2(396.5, 477.5)
+shape = SubResource("RectangleShape2D_17q0q")
 
-[node name="Objeto" parent="." unique_id=1096230146 instance=ExtResource("9_0xlcw")]
-position = Vector2(-444, 211)
+[node name="EntradaObservacion" type="Area2D" parent="." unique_id=1584493372]
+script = ExtResource("13_17q0q")
 
-[connection signal="body_entered" from="EntradaReactor" to="EntradaReactor" method="_on_body_entered"]
-[connection signal="body_exited" from="EntradaReactor" to="EntradaReactor" method="_on_body_exited"]
-[connection signal="body_entered" from="EntradaObservacion" to="EntradaObservacion" method="_on_body_entered"]
-[connection signal="body_exited" from="EntradaObservacion" to="EntradaObservacion" method="_on_body_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaObservacion" unique_id=1505143009]
+position = Vector2(-438.75, 171.75)
+shape = SubResource("RectangleShape2D_xl0ly")
+
+[node name="EntradaReactor" type="Area2D" parent="." unique_id=613522823]
+script = ExtResource("14_xl0ly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaReactor" unique_id=1506983021]
+position = Vector2(-91.5, 693.25)
+shape = SubResource("RectangleShape2D_nl7p8")
+
+[node name="EntradaAlmacen" type="Area2D" parent="." unique_id=1553485798]
+script = ExtResource("15_nl7p8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaAlmacen" unique_id=769686055]
+position = Vector2(-582, 491.125)
+shape = SubResource("RectangleShape2D_6xgh3")
+
+[node name="EntradaDormitorios" type="Area2D" parent="." unique_id=1608735555]
+script = ExtResource("16_6xgh3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaDormitorios" unique_id=1531016492]
+position = Vector2(248, 604)
+shape = SubResource("RectangleShape2D_uby1p")
+
+[node name="EntradaPuente" type="Area2D" parent="." unique_id=1191518881]
+script = ExtResource("17_uby1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaPuente" unique_id=1418782305]
+position = Vector2(-93, 34)
+shape = SubResource("RectangleShape2D_qfgnh")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="EntradaLaboratorio" to="EntradaLaboratorio" method="_on_body_entered"]
-[connection signal="body_exited" from="EntradaLaboratorio" to="EntradaLaboratorio" method="_on_body_exited"]
+[connection signal="body_entered" from="EntradaMantenimiento" to="EntradaMantenimiento" method="_on_body_entered"]
+[connection signal="body_entered" from="EntradaEnfermeria" to="EntradaEnfermeria" method="_on_body_entered"]
+[connection signal="body_entered" from="EntradaObservacion" to="EntradaObservacion" method="_on_body_entered"]
+[connection signal="body_entered" from="EntradaReactor" to="EntradaReactor" method="_on_body_entered"]
+[connection signal="body_entered" from="EntradaAlmacen" to="EntradaAlmacen" method="_on_body_entered"]
+[connection signal="body_entered" from="EntradaDormitorios" to="EntradaDormitorios" method="_on_body_entered"]
+[connection signal="body_entered" from="EntradaPuente" to="EntradaPuente" method="_on_body_entered"]

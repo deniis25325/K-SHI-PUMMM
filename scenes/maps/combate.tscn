@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://sfssa8r162ok"]
+
+[ext_resource type="Script" uid="uid://l6dygr3lkx0c" path="res://combate.gd" id="1_qq181"]
+[ext_resource type="Texture2D" uid="uid://dn8if00jt6elk" path="res://assets/characters/ChatGPT Image 24 may 2026, 08_22_48 p.m.-Photoroom.png" id="2_7egub"]
+[ext_resource type="Texture2D" uid="uid://8vjv448s6e8c" path="res://assets/characters/ChatGPT Image 24 may 2026, 08_24_56 p.m.-Photoroom.png" id="3_vh0r7"]
+[ext_resource type="Texture2D" uid="uid://bwit21pd3e27x" path="res://assets/characters/ChatGPT Image 24 may 2026, 08_26_05 p.m.-Photoroom.png" id="4_px500"]
+[ext_resource type="Texture2D" uid="uid://etg8u6cro2ch" path="res://assets/characters/ChatGPT Image 24 may 2026, 08_36_04 p.m..png" id="5_vh0r7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7egub"]
+font_size = 35
+
+[node name="Combate" type="Control" unique_id=789844481]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qq181")
+img_piedra = ExtResource("2_7egub")
+img_papel = ExtResource("3_vh0r7")
+img_tijera = ExtResource("4_px500")
+
+[node name="ChatGptImage24May2026,083604P_m_" type="Sprite2D" parent="." unique_id=680920483]
+position = Vector2(641, 360)
+scale = Vector2(0.83203125, 0.703125)
+texture = ExtResource("5_vh0r7")
+
+[node name="Piedra" type="Button" parent="." unique_id=745036602]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 606.0
+offset_right = 488.0
+offset_bottom = 686.0
+text = "Piedra"
+
+[node name="Papel" type="Button" parent="." unique_id=1995093370]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 606.0
+offset_right = 720.0
+offset_bottom = 683.0
+text = "Papel"
+
+[node name="Tijera" type="Button" parent="." unique_id=2005933081]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 606.0
+offset_right = 966.0
+offset_bottom = 686.0
+text = "Tijera"
+
+[node name="Resultado" type="Label" parent="." unique_id=526751492]
+layout_mode = 0
+offset_left = 423.0
+offset_right = 837.0
+offset_bottom = 151.0
+label_settings = SubResource("LabelSettings_7egub")
+
+[node name="CartaJugador" type="TextureRect" parent="." unique_id=1014276094]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_right = 0.016
+offset_left = 97.52
+offset_top = 112.0
+offset_right = 531.52
+offset_bottom = 525.0
+expand_mode = 1
+
+[node name="CartaAlien" type="TextureRect" parent="." unique_id=508530749]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031000001
+anchor_bottom = 0.119
+offset_left = 724.0
+offset_top = 112.0
+offset_right = 1113.32
+offset_bottom = 439.32
+expand_mode = 1
+
+[connection signal="pressed" from="Piedra" to="." method="_on_piedra_pressed"]
+[connection signal="pressed" from="Papel" to="." method="_on_papel_pressed"]
+[connection signal="pressed" from="Tijera" to="." method="_on_tijera_pressed"]

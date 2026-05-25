@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://co5gwinajijd8"]
+
+[ext_resource type="Texture2D" uid="uid://cfjyn63epo7ri" path="res://assets/maps/ChatGPT Image 24 may 2026, 11_25_02 p.m..png" id="1_mp64g"]
+[ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_vpuv4"]
+[ext_resource type="Texture2D" uid="uid://coa7vjc30uy7p" path="res://assets/characters/948b88af-bb6f-4f0e-b451-51eb90c5d3de-Photoroom.png" id="3_blp1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31qly"]
+size = Vector2(193, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0fu6"]
+size = Vector2(177, 161)
+
+[node name="Dormitorios" type="Node2D" unique_id=1346024843]
+
+[node name="ChatGptImage24May2026,112502P_m_" type="Sprite2D" parent="." unique_id=1036394870]
+position = Vector2(652, 365.49997)
+scale = Vector2(0.9343795, 0.6764706)
+texture = ExtResource("1_mp64g")
+
+[node name="Player" parent="." unique_id=1150411554 instance=ExtResource("2_vpuv4")]
+position = Vector2(-54, 86)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1452722915]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1368032326]
+position = Vector2(360.5, 322.5)
+shape = SubResource("RectangleShape2D_31qly")
+
+[node name="948b88AfBb6f4f0eB45151Eb90c5d3DePhotoroom" type="Sprite2D" parent="." unique_id=758072856]
+position = Vector2(359.00006, 326.00006)
+scale = Vector2(0.3203125, 0.28711987)
+texture = ExtResource("3_blp1g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1100561219]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1794078656]
+position = Vector2(361.5, 322.5)
+shape = SubResource("RectangleShape2D_y0fu6")

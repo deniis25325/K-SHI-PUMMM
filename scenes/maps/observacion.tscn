@@ -3,6 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://dbb3aml0iy3fe" path="res://assets/maps/ChatGPT Image 21 may 2026, 06_35_31 p.m..png" id="1_d283s"]
 [ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_w3aoh"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3aoh"]
+size = Vector2(1502, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa3rq"]
+size = Vector2(298, 452.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8ac4"]
+size = Vector2(1146, 279)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkrcr"]
+size = Vector2(283, 283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d08ka"]
+size = Vector2(148, 214)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7axn"]
+size = Vector2(144, 230)
+
 [node name="observacion" type="Node2D" unique_id=1551761614]
 
 [node name="ChatGptImage21May2026,063531P_m_" type="Sprite2D" parent="." unique_id=1371877925]
@@ -10,4 +28,30 @@ position = Vector2(50, 259)
 texture = ExtResource("1_d283s")
 
 [node name="Player" parent="." unique_id=1150411554 instance=ExtResource("2_w3aoh")]
-position = Vector2(-628, 251)
+position = Vector2(-631, 31)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1699521577]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=258076642]
+position = Vector2(53, 46)
+shape = SubResource("RectangleShape2D_w3aoh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=736869011]
+position = Vector2(-512, 600.25)
+shape = SubResource("RectangleShape2D_qa3rq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1499743187]
+position = Vector2(170, 683.5)
+shape = SubResource("RectangleShape2D_d8ac4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1749903912]
+position = Vector2(599.5, 408.5)
+shape = SubResource("RectangleShape2D_wkrcr")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=365688259]
+position = Vector2(657, 203)
+shape = SubResource("RectangleShape2D_d08ka")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1008963144]
+position = Vector2(47, 336)
+shape = SubResource("RectangleShape2D_p7axn")

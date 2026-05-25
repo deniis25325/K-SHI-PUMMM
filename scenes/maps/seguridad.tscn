@@ -10,4 +10,4 @@ position = Vector2(96, 148)
 texture = ExtResource("1_5bmcb")
 
 [node name="Player" parent="ChatGptImage21May2026,065143P_m_" unique_id=1150411554 instance=ExtResource("2_6561r")]
-position = Vector2(-681, 7)
+position = Vector2(-617, -231)

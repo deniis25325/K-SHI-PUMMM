@@ -2,15 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://651ctpnuieri" path="res://assets/maps/ChatGPT Image 21 may 2026, 06_25_22 p.m..png" id="1_iosna"]
 [ext_resource type="PackedScene" uid="uid://memtochem54v" path="res://scenes/player/Player.tscn" id="2_ibnpk"]
+[ext_resource type="Script" uid="uid://bj3pucoavm8cr" path="res://scenes/maps/alien555.gd" id="3_06cww"]
+[ext_resource type="Script" uid="uid://b8nfpeunasvfd" path="res://scripts/inventario.gd" id="3_umptn"]
+[ext_resource type="Texture2D" uid="uid://2h5a42i1ahnr" path="res://assets/characters/15226451289621198911-Photoroom.png" id="3_v18b4"]
+[ext_resource type="Script" uid="uid://nbwvkuqenwui" path="res://scenes/maps/inventario_label.gd" id="4_v18b4"]
+[ext_resource type="Script" uid="uid://bvf4adbri6xos" path="res://ui_dialogo.gd" id="5_06cww"]
+[ext_resource type="Script" uid="uid://coymoyelthiag" path="res://scenes/maps/entrada_hub.gd" id="8_2falo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iosna"]
-size = Vector2(608.5, 23)
+size = Vector2(608.5, 114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibnpk"]
-size = Vector2(592, 20)
+size = Vector2(592, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmtom"]
-size = Vector2(382, 20)
+size = Vector2(257, 289)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umptn"]
 size = Vector2(34.484505, 125.86133)
@@ -25,10 +31,49 @@ size = Vector2(43.5, 93.5)
 size = Vector2(24, 83.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crr61"]
-size = Vector2(29, 753)
+size = Vector2(132, 753)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcmvo"]
-size = Vector2(600, 171)
+size = Vector2(750, 192.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkfyb"]
+size = Vector2(296.5, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8y78i"]
+size = Vector2(265, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qs2io"]
+size = Vector2(288, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pm6d"]
+size = Vector2(206, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urbc5"]
+size = Vector2(318, 122.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fvkc"]
+size = Vector2(318, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo04m"]
+size = Vector2(301.5, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8376"]
+size = Vector2(163, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40lim"]
+size = Vector2(204, 218)
+
+[sub_resource type="FontVariation" id="FontVariation_0xlcw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2falo"]
+font = SubResource("FontVariation_0xlcw")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_crr61"]
+font_size = 30
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1loso"]
+size = Vector2(229, 63)
 
 [node name="Enfermeria" type="Node2D" unique_id=1578170939]
 
@@ -37,20 +82,20 @@ position = Vector2(101, 98)
 texture = ExtResource("1_iosna")
 
 [node name="Player" parent="." unique_id=1150411554 instance=ExtResource("2_ibnpk")]
-position = Vector2(-575, 116)
+position = Vector2(-596, -153)
 
 [node name="walltop" type="StaticBody2D" parent="." unique_id=1845016658]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walltop" unique_id=1602118088]
-position = Vector2(-294.25, 511.5)
+position = Vector2(-294.25, 466)
 shape = SubResource("RectangleShape2D_iosna")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="walltop" unique_id=1618954200]
-position = Vector2(505, 508)
+position = Vector2(505, 473.5)
 shape = SubResource("RectangleShape2D_ibnpk")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="walltop" unique_id=1914479838]
-position = Vector2(111, 656)
+position = Vector2(98.5, 521.5)
 shape = SubResource("RectangleShape2D_pmtom")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="walltop" unique_id=537370441]
@@ -76,17 +121,112 @@ position = Vector2(201, 538.75)
 shape = SubResource("RectangleShape2D_2falo")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="walltop" unique_id=221030719]
-position = Vector2(-586.5, 128.5)
+position = Vector2(-535, 128.5)
 shape = SubResource("RectangleShape2D_crr61")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="walltop" unique_id=1768751063]
-position = Vector2(781, 122)
+position = Vector2(735, 122)
 shape = SubResource("RectangleShape2D_crr61")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="walltop" unique_id=566489179]
-position = Vector2(-297, -331.5)
+position = Vector2(-295, -312)
 shape = SubResource("RectangleShape2D_wcmvo")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="walltop" unique_id=292046784]
-position = Vector2(482, -331)
+position = Vector2(405, -301)
 shape = SubResource("RectangleShape2D_wcmvo")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="walltop" unique_id=2118159481]
+position = Vector2(-319.75, 97.5)
+shape = SubResource("RectangleShape2D_bkfyb")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="walltop" unique_id=1415988273]
+position = Vector2(-342.5, 290)
+shape = SubResource("RectangleShape2D_8y78i")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="walltop" unique_id=1112800547]
+position = Vector2(522, 292.5)
+shape = SubResource("RectangleShape2D_qs2io")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="walltop" unique_id=176686670]
+position = Vector2(98, 260.5)
+shape = SubResource("RectangleShape2D_5pm6d")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="walltop" unique_id=1857262715]
+position = Vector2(523, 93.75)
+shape = SubResource("RectangleShape2D_urbc5")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="walltop" unique_id=489713505]
+position = Vector2(-317, -90.5)
+shape = SubResource("RectangleShape2D_7fvkc")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="walltop" unique_id=289050959]
+position = Vector2(521.75, -100)
+shape = SubResource("RectangleShape2D_jo04m")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="walltop" unique_id=21349778]
+position = Vector2(57.5, -61.5)
+shape = SubResource("RectangleShape2D_w8376")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=415432421 node_paths=PackedStringArray("ui_dialogo")]
+script = ExtResource("3_06cww")
+ui_dialogo = NodePath("../UI_Dialogo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=781944477]
+position = Vector2(51, -68)
+shape = SubResource("RectangleShape2D_40lim")
+
+[node name="15226451289621198911Photoroom" type="Sprite2D" parent="." unique_id=669914832]
+position = Vector2(54, -67)
+scale = Vector2(0.28808597, 0.3072451)
+texture = ExtResource("3_v18b4")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=928011350]
+script = ExtResource("3_umptn")
+
+[node name="Panel" type="Panel" parent="UI" unique_id=1353239416]
+offset_left = 915.0
+offset_top = 40.0
+offset_right = 1259.0
+offset_bottom = 686.0
+
+[node name="Label" type="Label" parent="UI/Panel" unique_id=99054347]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -306.672
+offset_top = -309.0
+offset_right = 3.328003
+offset_bottom = 308.0
+label_settings = SubResource("LabelSettings_2falo")
+script = ExtResource("4_v18b4")
+
+[node name="UI_Dialogo" type="CanvasLayer" parent="." unique_id=1834543183]
+script = ExtResource("5_06cww")
+
+[node name="Dialogo" type="Panel" parent="UI_Dialogo" unique_id=1461370011]
+offset_left = 163.0
+offset_top = 516.0
+offset_right = 1168.0
+offset_bottom = 673.0
+
+[node name="Texto" type="Label" parent="UI_Dialogo/Dialogo" unique_id=1563682199]
+layout_mode = 0
+offset_right = 1001.0
+offset_bottom = 146.0
+label_settings = SubResource("LabelSettings_crr61")
+autowrap_mode = 2
+
+[node name="EntradaHub" type="Area2D" parent="." unique_id=2118616924]
+script = ExtResource("8_2falo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaHub" unique_id=1339309232]
+position = Vector2(113, 402)
+shape = SubResource("RectangleShape2D_1loso")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="EntradaHub" to="EntradaHub" method="_on_body_entered"]
